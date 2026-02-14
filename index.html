@@ -94,10 +94,43 @@
         .date-hero { font-size: 72px; font-weight: 900; line-height: 1; text-align: center; letter-spacing: -2px; color: var(--ink); }
         .date-sub { text-align: center; font-size: 15px; letter-spacing: 2px; color: var(--sub-ink); margin-top: 15px; }
         
-        .time-timeline { margin: 40px 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-        .time-box { display: flex; align-items: center; width: 100%; justify-content: center; }
-        .time-tag { font-size: 22px; color: var(--gold-dark); flex: 0 0 110px; font-weight: 700; text-align: right; padding-right: 20px; }
-        .time-main { font-size: 22px; font-weight: 800; color: var(--ink); border-left: 2px solid var(--gold-light); padding-left: 20px; flex: 0 0 130px; }
+   .time-timeline { 
+    margin: 40px 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.time-box { 
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+    justify-content: center; 
+}
+
+/* 讓左側標籤向右對齊，並固定寬度 */
+.time-tag { 
+    font-size: 22px; 
+    color: var(--gold-dark); 
+    flex: 1;           /* 改用彈性比例 */
+    max-width: 150px;  /* 設定一個最大寬度確保不會過寬 */
+    font-weight: 700; 
+    text-align: right; 
+    padding-right: 20px; 
+}
+
+/* 讓右側內容向左對齊，並固定寬度 */
+.time-main { 
+    font-size: 22px; 
+    font-weight: 800; 
+    color: var(--ink); 
+    border-left: 2px solid var(--gold-light); 
+    padding-left: 20px; 
+    flex: 1;           /* 改用彈性比例 */
+    max-width: 200px;  /* 右側文字通常較長，給予較多空間 */
+    text-align: left;
+}
 
         .info-card { 
             border-radius: 4px; padding: 30px 20px; margin-bottom: 20px; 
@@ -207,11 +240,11 @@
             
             <div class="time-timeline">
                 <div class="time-box">
-                    <span class="time-tag"> 07：20</span>
+                    <span class="time-tag"> 07：20 </span>
                     <span class="time-main">家奠禮</span>
                 </div>
                 <div class="time-box">
-                    <span class="time-tag">隨即</span>
+                    <span class="time-tag"> 隨即 </span>
                     <span class="time-main">個別來賓致意</span>
                 </div>
             </div>
